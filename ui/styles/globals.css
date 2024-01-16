@@ -9,6 +9,9 @@
   body {
     @apply bg-dark text-grey;
   }
+  main {
+    @apply overflow-hidden
+  }
   h1,
   h2 {
     @apply text-[2.5rem] font-bold leading-none tracking-tighter md:text-7xl xl:text-[5.5rem];
@@ -17,7 +20,7 @@
     @apply text-2xl font-bold leading-5;
   }
   p {
-    @apply text-base font-medium leading-[1.625] md:text-xl;
+    @apply text-base font-medium leading-[1.625] md:text-lg;
   }
   button,
   [role="button"] {
@@ -52,5 +55,37 @@
   }
   .scrollbar::-webkit-scrollbar-thumb:hover {
     @apply bg-[#4ee19fe3];
+  }
+  /* Button */
+  .btn {
+    @apply py-3 border-b-2 border-green uppercase bg-gradient-to-r from-[theme(colors.green.DEFAULT)_50%] 
+    to-[white_50%] bg-2/1 bg-right bg-clip-text [-webkit-background-clip:text] [-webkit-text-fill-color:transparent] 
+    box-decoration-clone duration-300 hover:bg-left focus:bg-left w-fit h-fit;
+  }
+  /* Social links */
+  .social-list {
+    @apply tracking-normal md:!gap-8;
+  }
+  .social-link {
+    @apply w-5 h-5 flex items-center justify-center md:w-6 md:h-6;
+  }
+  .social-link svg {
+    @apply w-full;
+  }
+  .social-link path {
+    @apply duration-300;
+  }
+  .social-link:hover path {
+    @apply fill-green;
+  }
+  /* Decor */
+  .decor::after {
+    @apply [content:url('/assets/images/pattern-rings.svg')] absolute;
+  }
+  .hero .decor::after {
+    @apply top-[124px] right-1/2 md:top-[86px] md:left-[-265px] xl:top-[133px] xl:left-[-100px];
+  }
+  .skills .decor::after {
+    @apply left-1/2 bottom-0 translate-y-1/2 md:left-unset md:right-[-350px] xl:right-[-236px];
   }
 }

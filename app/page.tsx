@@ -1,8 +1,11 @@
+import HeroSection from "@/ui/sections/hero";
+import SkillsSection from "@/ui/sections/skills";
 
 export default function Home() {
   return (
-    <main className="">
-      <h1>Single page developer portfolio using next-js</h1>
+    <main>
+      <HeroSection />
+      <SkillsSection />
     </main>
-  )
+  );
 }

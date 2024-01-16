@@ -19,6 +19,7 @@ const config: Config = {
         md: em(768),
         lg: em(992),
         xl: em(1110),
+        "2xl": em(1320),
       },
       padding: {
         DEFAULT: "1.5rem",
@@ -36,10 +37,20 @@ const config: Config = {
         "2xl": em(1400),
         "3xl": em(1600),
       },
+      spacing: {
+        13: "3.25rem",
+        15: "3.75rem",
+        18: "4.5rem",
+        22: "5.5rem",
+        198: "12.375rem",
+        218: "13.625rem",
+        unset: "unset",
+      },
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        decor: "url('/assets/images/pattern-rings.svg')",
+      },
+      backgroundSize: {
+        "2/1": "200% 100%",
       },
       letterSpacing: {
         tighter: "-0.15625rem",
@@ -47,6 +58,11 @@ const config: Config = {
       },
       lineHeight: {
         "0": "0",
+      },
+      zIndex: {
+        "1": "1",
+        "100": "100",
+        "1000": "1000",
       },
     },
   },

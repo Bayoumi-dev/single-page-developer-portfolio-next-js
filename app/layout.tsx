@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "@/ui/styles/globals.css";
 import { spaceGroteskFont } from "@/ui/styles/fonts/fonts";
+import Header from "@/ui/layout/header";
 
 export const metadata: Metadata = {
   title: "Single-page developer portfolio | Frontend Mentor",
@@ -15,7 +16,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${spaceGroteskFont.className}`}>{children}</body>
+      <body className={`${spaceGroteskFont.className}`}>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
