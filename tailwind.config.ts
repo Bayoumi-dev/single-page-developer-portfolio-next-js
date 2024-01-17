@@ -1,7 +1,11 @@
 import type { Config } from "tailwindcss";
+import  plugin from "tailwindcss/plugin";
 
 const config: Config = {
   content: ["./ui/**/*.{js,ts,jsx,tsx,mdx}", "./app/**/*.{js,ts,jsx,tsx,mdx}"],
+  corePlugins: {
+    container: false,
+  },
   theme: {
     colors: {
       dark: "#151515;",
@@ -13,29 +17,15 @@ const config: Config = {
       white: "#ffffff",
       error: "#ff6f5b",
     },
-    container: {
-      center: true,
-      screens: {
-        md: em(768),
-        lg: em(992),
-        xl: em(1110),
-        "2xl": em(1320),
-      },
-      padding: {
-        DEFAULT: "1.5rem",
-        md: "2.5rem",
-        xl: "0",
-      },
-    },
     extend: {
       screens: {
-        xs: em(360),
-        sm: em(640),
-        md: em(768),
-        lg: em(1024),
-        xl: em(1280),
-        "2xl": em(1400),
-        "3xl": em(1600),
+        xs: "22.5em",
+        sm: "40em",
+        md: "48em",
+        lg: "64em",
+        xl: "80em",
+        "2xl": "87.5em",
+        "3xl": "100em",
       },
       spacing: {
         13: "3.25rem",
@@ -66,13 +56,33 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addBase }) {
+      addBase({
+        ".container": {
+          width: "100%",
+          marginInline: "auto",
+          paddingInline: "1.5rem",
+          "@media (min-width: 40em)": {
+            maxWidth: "36rem",
+          },
+          "@media (min-width: 48em)": {
+            maxWidth: "48rem",
+            paddingInline: "2.5rem",
+          },
+          "@media (min-width: 64em)": {
+            maxWidth: "62rem",
+            paddingInline: "0",
+          },
+          "@media (min-width: 80em)": {
+            maxWidth: "69.375rem",
+          },
+          "@media (min-width: 100em)": {
+            maxWidth: "82.5rem",
+          },
+        },
+      });
+    }),
+  ],
 };
 export default config;
-
-/**
- * @description Pixel to em
- */
-function em(px: number) {
-  return `${px / 16}em`;
-}
