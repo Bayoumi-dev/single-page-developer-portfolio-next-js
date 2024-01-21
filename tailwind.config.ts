@@ -72,7 +72,7 @@ const config: Config = {
           },
           "@media (min-width: 48em)": {
             maxWidth: "48rem",
-            paddingInline: "2.5rem",
+            paddingInline: "2rem",
           },
           "@media (min-width: 64em)": {
             maxWidth: "62rem",

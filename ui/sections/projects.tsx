@@ -69,7 +69,7 @@ export default function ProjectsSection() {
           </a>
         </div>
         {/* Projects List */}
-        <ol className="flex flex-row flex-wrap justify-center pt-10 gap-y-10 gap-x-6 md:pt-15 xl:pt-20 xl:gap-y-[4.375rem] 3xl:gap-x-15">
+        <ol className="flex flex-row flex-wrap justify-center pt-10 gap-y-10 gap-x-5 md:pt-15 xl:pt-20 xl:gap-y-[4.375rem] 3xl:gap-x-15">
           {projects.map((project, i) => (
             <li key={i} className="relative">
               <div className="relative w-[21.375rem] h-[15.8125rem] xl:w-[33.75rem] xl:h-100 peer">
