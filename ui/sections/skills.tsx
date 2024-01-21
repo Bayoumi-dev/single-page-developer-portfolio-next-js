@@ -1,3 +1,5 @@
+import Divider from "../layout/divider";
+
 const skillsList: { name: String; experience: String }[] = [
   { name: "HTML", experience: "4 Years Experience" },
   { name: "CSS", experience: "4 Years Experience" },
@@ -11,7 +13,8 @@ export default function SkillsSection() {
   return (
     <section className="skills relative">
       <div className="decor absolute top-0 left-1/2 -translate-x-1/2 -z-1 w-full max-[1920px] h-full" />
-      <div className="container py-10 md:pt-13 md:pb-0 xl:pt-18 border-t border-white">
+      <Divider />
+      <div className="container py-10 md:pt-13 md:pb-0 xl:pt-18">
         <h2 className="absolute opacity-0 -z-10">Skills</h2>
         <ul className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-y-6 md:gap-y-15 text-center md:text-left">
           {skillsList.map((skill, i) => (

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Divider from "../layout/divider";
 
 const projects: {
   name: String;
@@ -59,7 +60,8 @@ const projects: {
 export default function ProjectsSection() {
   return (
     <section className="">
-      <div className="container rel py-20 md:py-25 xl:py-35 border-t border-white md:border-0">
+      <div className="container relative py-20 md:py-25 xl:py-35">
+        <Divider className={"md: hidden"} />
         <div className="flex flex-wrap justify-between items-center gap-2">
           <h2>Projects</h2>
           <a href="#contact" role="button" className="btn flex-shrink-0 pt-0">
@@ -67,9 +69,7 @@ export default function ProjectsSection() {
           </a>
         </div>
         {/* Projects List */}
-        <ol
-          className="flex flex-row flex-wrap justify-center pt-10 gap-y-10 gap-x-6 md:pt-15 xl:pt-20 xl:gap-y-[4.375rem] 3xl:gap-x-15"
-        >
+        <ol className="flex flex-row flex-wrap justify-center pt-10 gap-y-10 gap-x-6 md:pt-15 xl:pt-20 xl:gap-y-[4.375rem] 3xl:gap-x-15">
           {projects.map((project, i) => (
             <li key={i} className="relative">
               <div className="relative w-[21.375rem] h-[15.8125rem] xl:w-[33.75rem] xl:h-100 peer">
