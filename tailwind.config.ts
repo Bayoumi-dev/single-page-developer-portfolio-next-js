@@ -15,6 +15,7 @@ const config: Config = {
       },
       grey: "#d9d9d9",
       white: "#ffffff",
+      black: "#000000",
       error: "#ff6f5b",
     },
     extend: {
@@ -32,6 +33,9 @@ const config: Config = {
         15: "3.75rem",
         18: "4.5rem",
         22: "5.5rem",
+        25: "6.25rem",
+        35: "8.75rem",
+        100: '25rem',
         198: "12.375rem",
         218: "13.625rem",
         unset: "unset",
