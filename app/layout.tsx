@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "@/ui/styles/globals.css";
-import { spaceGroteskFont } from "@/ui/styles/fonts/fonts";
+import { spaceGroteskFont } from "@/lib/fonts";
 import Header from "@/ui/layout/header";
 
 export const metadata: Metadata = {
