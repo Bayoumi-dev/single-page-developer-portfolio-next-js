@@ -1,6 +1,9 @@
+import Link from "next/link";
+
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
 interface AnchorProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   to: String;
+  nextLink?: Boolean;
 }
 
 const buttonStyle = `py-3 border-b-2 border-green uppercase bg-gradient-to-r from-[theme(colors.green)_50%] 
@@ -17,8 +20,17 @@ export function Button(props: ButtonProps) {
 }
 
 export function ButtonLink(props: AnchorProps) {
-  const { className, to, children, ...restProp } = props;
-  return (
+  const { className, to, nextLink, children, ...restProp } = props;
+
+  return nextLink ? (
+    <Link
+      href={`${to}`}
+      role="button"
+      className={`${buttonStyle} ${className}`}
+    >
+      {children}
+    </Link>
+  ) : (
     <a
       {...restProp}
       href={`${to}`}
