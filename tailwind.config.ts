@@ -1,5 +1,5 @@
 import type { Config } from "tailwindcss";
-import  plugin from "tailwindcss/plugin";
+import plugin from "tailwindcss/plugin";
 
 const config: Config = {
   content: ["./ui/**/*.{js,ts,jsx,tsx,mdx}", "./app/**/*.{js,ts,jsx,tsx,mdx}"],
@@ -9,14 +9,15 @@ const config: Config = {
   theme: {
     colors: {
       dark: "#151515;",
-      green: {
-        DEFAULT: "#4ee1a0",
+      green: "#4ee1a0",
+      grey: {
+        DEFAULT: "#d9d9d9",
         dark: "#242424",
       },
-      grey: "#d9d9d9",
       white: "#ffffff",
       black: "#000000",
       error: "#ff6f5b",
+      transparent: "transparent",
     },
     extend: {
       screens: {
@@ -32,10 +33,12 @@ const config: Config = {
         13: "3.25rem",
         15: "3.75rem",
         18: "4.5rem",
+        21: "5.25rem",
         22: "5.5rem",
+        23: "5.75rem",
         25: "6.25rem",
         35: "8.75rem",
-        100: '25rem',
+        100: "25rem",
         198: "12.375rem",
         218: "13.625rem",
         unset: "unset",

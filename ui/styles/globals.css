@@ -42,7 +42,7 @@
   /* Custom Scrollbar */
   .scrollbar {
     @apply [scroll-behavior:smooth] [scrollbar-width:thin] 
-    [scrollbar-color:theme(colors.green.DEFAULT)_theme(colors.dark)];
+    [scrollbar-color:theme(colors.green)_theme(colors.dark)];
   }
   .scrollbar::-webkit-scrollbar {
     @apply max-w-[0.625rem];
@@ -58,7 +58,7 @@
   }
   /* Button */
   .btn {
-    @apply py-3 border-b-2 border-green uppercase bg-gradient-to-r from-[theme(colors.green.DEFAULT)_50%] 
+    @apply py-3 border-b-2 border-green uppercase bg-gradient-to-r from-[theme(colors.green)_50%] 
     to-[white_50%] bg-2/1 bg-right bg-clip-text [-webkit-background-clip:text] [-webkit-text-fill-color:transparent] 
     box-decoration-clone duration-300 hover:bg-left focus:bg-left w-fit h-fit;
   }
@@ -87,5 +87,8 @@
   }
   .skills .decor::after {
     @apply left-1/2 bottom-0 translate-y-1/2 md:left-unset md:right-[-350px] xl:right-[-236px];
+  }
+  .contact .decor::after {
+    @apply left-1/2 bottom-24 md:left-[-368px] md:bottom-7 xl:left-[-285px] xl:bottom-11;
   }
 }

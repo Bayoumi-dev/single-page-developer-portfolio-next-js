@@ -1,3 +1,4 @@
+import ContactSection from "@/ui/sections/contact";
 import HeroSection from "@/ui/sections/hero";
 import ProjectsSection from "@/ui/sections/projects";
 import SkillsSection from "@/ui/sections/skills";
@@ -8,6 +9,7 @@ export default function Home() {
       <HeroSection />
       <SkillsSection />
       <ProjectsSection />
+      <ContactSection />
     </main>
   );
 }
