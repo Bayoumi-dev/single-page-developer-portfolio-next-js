@@ -1,3 +1,4 @@
+import { Button } from "./buttons";
 import { Input, Textarea } from "./fields";
 
 export default function ContactForm() {
@@ -14,13 +15,13 @@ export default function ContactForm() {
       />
       <div className="flex flex-col md:flex-row justify-between">
         <div id="send" className="mb-4 md:mb-0"></div>
-        <button
+        <Button
           name="submit"
           type="submit"
-          className="btn self-end ms-auto pt-0"
+          className="self-end ms-auto pt-0"
         >
           Send message
-        </button>
+        </Button>
       </div>
     </form>
   );

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { ButtonLink } from "@/ui/components/buttons";
 
 const projects: {
   name: String;
@@ -78,27 +79,16 @@ export default function ProjectsList() {
             </ul>
           </div>
           <div
-            className="w-full flex mt-[0.625rem] gap-x-7 xl:absolute xl:top-0 xl:left-0 
-                xl:flex-col xl:justify-center items-center xl:w-[33.75rem] xl:h-100 xl:mt-0 xl:gap-y-[2.375rem] 
-               xl:bg-black/75 xl:invisible xl:opacity-0 xl:duration-300 xl:hover:visible xl:hover:opacity-100
-                xl:peer-hover:visible xl:peer-hover:opacity-100"
+            className="w-full flex mt-[0.625rem] gap-x-7 xl:absolute xl:top-0 xl:left-0 xl:flex-col xl:justify-center 
+            items-center xl:w-[33.75rem] xl:h-100 xl:mt-0 xl:gap-y-[2.375rem] xl:bg-black/75 xl:invisible 
+            xl:opacity-0 xl:duration-300 xl:hover:visible xl:hover:opacity-100 xl:peer-hover:visible xl:peer-hover:opacity-100"
           >
-            <a
-              href={`${project.previewLink}`}
-              target="_blank"
-              role="button"
-              className="btn"
-            >
+            <ButtonLink to={project.previewLink} target="_blank">
               View Project
-            </a>
-            <a
-              href={`${project.codeLink}`}
-              target="_blank"
-              role="button"
-              className="btn"
-            >
+            </ButtonLink>
+            <ButtonLink to={project.codeLink} target="_blank">
               View Code
-            </a>
+            </ButtonLink>
           </div>
         </li>
       ))}

@@ -56,12 +56,6 @@
   .scrollbar::-webkit-scrollbar-thumb:hover {
     @apply bg-[#4ee19fe3];
   }
-  /* Button */
-  .btn {
-    @apply py-3 border-b-2 border-green uppercase bg-gradient-to-r from-[theme(colors.green)_50%] 
-    to-[white_50%] bg-2/1 bg-right bg-clip-text [-webkit-background-clip:text] [-webkit-text-fill-color:transparent] 
-    box-decoration-clone duration-300 hover:bg-left focus:bg-left w-fit h-fit;
-  }
   /* Social links */
   .social-list {
     @apply tracking-normal md:!gap-8;

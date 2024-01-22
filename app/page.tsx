@@ -1,3 +1,4 @@
+import { ButtonLink } from "@/ui/components/buttons";
 import ContactForm from "@/ui/components/contact-form";
 import MainHeading from "@/ui/components/hero/main-heading";
 import ProfilePicture from "@/ui/components/hero/profile-picture";
@@ -22,9 +23,7 @@ export default function Home() {
           </div>
           <div className="pt-10 pb-22 text-center md:text-start md:pt-[9.375rem] md:pb-18 xl:pt-198 xl:pb-218">
             <MainHeading />
-            <a href="#contact" role="button" className="btn">
-              Contact Me
-            </a>
+            <ButtonLink to="#contact">Contact Me</ButtonLink>
           </div>
         </div>
       </section>
@@ -45,9 +44,9 @@ export default function Home() {
           <Divider className={"md: hidden"} />
           <div className="flex flex-wrap justify-between items-center gap-2">
             <h2>Projects</h2>
-            <a href="#contact" role="button" className="btn flex-shrink-0 pt-0">
+            <ButtonLink to="#contact" className="flex-shrink-0 pt-0">
               Contact Me
-            </a>
+            </ButtonLink>
           </div>
           <ProjectsList />
         </div>
