@@ -11,17 +11,17 @@ export default function Home() {
     <main>
       {/* Hero Section */}
       <section className="hero relative">
-        <div className="decor absolute top-0 left-1/2 -translate-x-1/2 -z-1 w-full max-w-[1920px] h-full" />
+        <div className="decor absolute top-0 left-1/2 -translate-x-1/2 -z-1 w-full max-w-480 h-full" />
         <div className="container xl:relative">
           <div
             className="relative flex items-center justify-center md:block md:absolute md:top-0 md:right-0 -z-1 
-          after:absolute after:bottom-0 after:right-[-165px] after:w-[129px] after:h-[129px] 
+          after:absolute after:bottom-0 after:right-[-10.3125rem] after:w-[8.0625rem] after:h-[8.0625rem] 
           after:border after:border-white after:rounded-full md:after:right-0 md:after:translate-x-1/2 
-          xl:after:bottom-[70px] xl:after:left-0 xl:after:-translate-x-1/2"
+          xl:after:bottom-[4.375rem] xl:after:left-0 xl:after:-translate-x-1/2"
           >
             <ProfilePicture />
           </div>
-          <div className="pt-10 pb-22 text-center md:text-start md:pt-[9.375rem] md:pb-18 xl:pt-198 xl:pb-218">
+          <div className="pt-10 pb-22 text-center md:text-start md:pt-[9.375rem] md:pb-18 xl:pt-[12.375rem] xl:pb-[13.625rem]">
             <MainHeading />
             <ButtonLink to="#contact">Contact Me</ButtonLink>
           </div>
@@ -30,7 +30,7 @@ export default function Home() {
 
       {/* Skills Section */}
       <section className="skills relative">
-        <div className="decor absolute top-0 left-1/2 -translate-x-1/2 -z-1 w-full max-[1920px] h-full" />
+        <div className="decor absolute top-0 left-1/2 -translate-x-1/2 -z-1 w-full max-480 h-full" />
         <div className="container relative py-10 md:pt-13 md:pb-0 xl:pt-18">
           <Divider />
           <h2 className="absolute opacity-0 -z-10">Skills</h2>
@@ -54,7 +54,7 @@ export default function Home() {
 
       {/* Contact Section */}
       <section id="contact" className="contact relative z-1 bg-grey-dark">
-        <div className="decor absolute top-0 left-1/2 -translate-x-1/2 -z-1 w-full max-w-[1920px] h-full" />
+        <div className="decor absolute top-0 left-1/2 -translate-x-1/2 -z-1 w-full max-w-480 h-full" />
         <div className="container pt-15 pb-22 md:pt-21 md:pb-23 md:flex flex-col xl:flex-row items-center xl:items-start xl:justify-between">
           <div className="max-w-[27.8125rem] text-center xl:text-start">
             <h2 className="">Contact</h2>

@@ -38,9 +38,9 @@ const config: Config = {
         23: "5.75rem",
         25: "6.25rem",
         35: "8.75rem",
+        90: "22.5rem",
         100: "25rem",
-        198: "12.375rem",
-        218: "13.625rem",
+        480: "120rem",
         unset: "unset",
       },
       backgroundImage: {

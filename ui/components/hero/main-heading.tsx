@@ -1,7 +1,7 @@
 export default function MainHeading() {
   return (
     <>
-      <h1 className="max-w-[360px] mx-auto md:mx-0 md:max-w-[27.8125rem] xl:max-w-[50rem]">
+      <h1 className="max-w-90 mx-auto md:mx-0 md:max-w-[27.8125rem] xl:max-w-[50rem]">
         Nice to <span className="md:block xl:!inline-block" />
         meet you! I’m{" "}
         <span
