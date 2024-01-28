@@ -60,6 +60,43 @@ const config: Config = {
         "1": "1",
         "100": "100",
         "1000": "1000",
+        top: "9999",
+      },
+      animation: {
+        hidden: "hidden 1s 5s forwards",
+        typewriter:
+          "typing 2.5s 1s steps(40, end) forwards,caret 0.75s step-end infinite",
+      },
+    },
+    keyframes: {
+      hidden: {
+        "100%": {
+          opacity: "0",
+          visibility: "hidden",
+        },
+      },
+      typing: {
+        "0%": {
+          width: "0",
+          opacity: "0",
+        },
+        "50%": {
+          opacity: "1",
+        },
+        "100%": {
+          width: "275px",
+        },
+      },
+      caret: {
+        "0%": {
+          borderColor: "transparent",
+        },
+        "50%": {
+          borderColor: "theme(colors.green)",
+        },
+        "100%": {
+          borderColor: "transparent",
+        },
       },
     },
   },

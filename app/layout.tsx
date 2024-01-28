@@ -4,6 +4,7 @@ import { spaceGroteskFont } from "@/lib/fonts";
 import Header from "@/ui/layout/header";
 import Footer from "@/ui/layout/footer";
 import ScrollToTopButton from "@/ui/layout/scroll-button";
+import Intro from "@/ui/components/intro";
 
 export const metadata: Metadata = {
   title: "Single-page developer portfolio | Frontend Mentor",
@@ -19,6 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${spaceGroteskFont.className}`}>
+        <Intro />
         <Header />
         {children}
         <ScrollToTopButton />

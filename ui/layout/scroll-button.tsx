@@ -24,8 +24,8 @@ export default function ScrollToTopButton() {
     <button
       id="scroll-button"
       aria-label="Go to the top of the page"
-      className={`fixed bottom-8 right-8 z-1000 translate-y-[calc(100%+2rem)] [transition:opacity_0.3s,transform_0.7s] 
-      hover:opacity-100 ${visible ? "opacity-75 translate-y-0" : "opacity-0"}`}
+      className={`fixed bottom-8 right-8 z-1000 [transition:opacity_0.3s,transform_0.7s] 
+      hover:opacity-100 ${visible ? "opacity-75 translate-y-0" : "translate-y-[calc(100%+2rem)] opacity-0"}`}
       onClick={scrollToTop}
     >
       <CaretUpIcSvg />
