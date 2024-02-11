@@ -85,8 +85,15 @@
   .contact .decor::after {
     @apply left-1/2 bottom-24 md:left-[-368px] md:bottom-7 xl:left-[-285px] xl:bottom-11;
   }
+  /* Typewriter */
   .typewriter {
     @apply text-xl uppercase text-left whitespace-nowrap w-0 my-0 mx-auto overflow-hidden 
     border-r animate-typewriter;
+  }
+  /* Holding Form */
+  .hold input,
+  .hold textarea,
+  .hold button {
+    @apply pointer-events-none select-none opacity-60;
   }
 }

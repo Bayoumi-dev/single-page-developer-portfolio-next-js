@@ -1,5 +1,5 @@
 import { ButtonLink } from "@/ui/components/buttons";
-import ContactForm from "@/ui/components/contact-form";
+import ContactForm from "@/ui/components/contact/contact-form";
 import MainHeading from "@/ui/components/hero/main-heading";
 import ProfilePicture from "@/ui/components/hero/profile-picture";
 import ProjectsList from "@/ui/components/projects/projects-list";

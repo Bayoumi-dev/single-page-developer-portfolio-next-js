@@ -74,3 +74,44 @@ export const CaretUpIcSvg: Svg = ({ className }) => (
     <path d="M3.204 11h9.592L8 5.519 3.204 11zm-.753-.659 4.796-5.48a1 1 0 0 1 1.506 0l4.796 5.48c.566.647.106 1.659-.753 1.659H3.204a1 1 0 0 1-.753-1.659z" />
   </svg>
 );
+
+export const CheckIcSvg: Svg = ({ className }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={14}
+    height={14}
+    fill="#4ee1a0"
+    viewBox="0 0 16 16"
+    className={className}
+  >
+    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+  </svg>
+);
+
+export const ExclamationFillIcSvg: Svg = ({ className }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={14}
+    height={14}
+    fill="#ff6f5b"
+    viewBox="0 0 16 16"
+    className={className}
+  >
+    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4m.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2" />
+  </svg>
+);
+
+export const ExclamationIcSvg: Svg = ({ className }) => (
+  <svg
+    width={24}
+    height={24}
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+  >
+    <circle cx={12} cy={12} r="11.5" stroke="#FF6F5B" />
+    <rect x={11} y={6} width={2} height={9} rx={1} fill="#FF6F5B" />
+    <rect x={11} y={17} width={2} height={2} rx={1} fill="#FF6F5B" />
+  </svg>
+);

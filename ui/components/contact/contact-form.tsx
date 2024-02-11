@@ -1,9 +1,11 @@
 "use client";
 
-import { Button } from "./buttons";
+import { useEffect, useRef, useState } from "react";
 import { Input, Textarea } from "./fields";
-import { useFormState, useFormStatus } from "react-dom";
+import { useFormState } from "react-dom";
 import { sendEmail, ContactFormState } from "@/lib/actions";
+import FormStatus from "./form-status";
+import SubmitButton from "./submit-button";
 
 interface ContactMeFormProps {}
 
@@ -11,6 +13,11 @@ const initialState = {
   message: "",
   error: false,
   success: false,
+  fieldErrors: {
+    name: null,
+    email: null,
+    message: null,
+  },
   fieldValues: {
     name: "",
     email: "",
@@ -21,24 +28,18 @@ const initialState = {
 export default function ContactForm({}: ContactMeFormProps) {
   const [formState, formAction] = useFormState(sendEmail, initialState);
 
-  function SubmitButton() {
-    const { pending } = useFormStatus();
-
-    return (
-      <Button
-        name="submit"
-        type="submit"
-        aria-disabled={pending}
-        className="self-end ms-auto pt-0"
-      >
-        Send message
-      </Button>
-    );
-  }
+  const formRef = useRef<HTMLFormElement>(null);
+  useEffect(() => {
+    if (formState?.success) {
+      formRef.current?.reset();
+      formRef.current?.classList.add("hold");
+    }
+  }, [formState]);
 
   return (
     <form
       id="contact-form"
+      ref={formRef}
       action={formAction}
       className="flex flex-col gap-y-8 md:w-[27.8125rem]"
     >
@@ -48,6 +49,7 @@ export default function ContactForm({}: ContactMeFormProps) {
         type="text"
         placeholder="name"
         aria-label="name"
+        errorMsg={formState.fieldErrors.name}
       />
       <Input
         id="email"
@@ -55,6 +57,7 @@ export default function ContactForm({}: ContactMeFormProps) {
         type="text"
         placeholder="email"
         aria-label="email"
+        errorMsg={formState.fieldErrors.email}
       />
       <Textarea
         id="message"
@@ -62,9 +65,15 @@ export default function ContactForm({}: ContactMeFormProps) {
         placeholder="message"
         aria-label="message"
         defaultValue={""}
+        errorMsg={formState.fieldErrors.message}
       />
       <div className="flex flex-col md:flex-row justify-between">
-        <div id="send" className="mb-4 md:mb-0"></div>
+        <FormStatus
+          status={`${
+            formState.success ? "sent" : formState.error ? "error" : "idle"
+          }`}
+          message={formState.message}
+        />
         <SubmitButton />
       </div>
     </form>

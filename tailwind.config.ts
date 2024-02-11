@@ -66,6 +66,7 @@ const config: Config = {
         hidden: "hidden 1s 5s forwards",
         typewriter:
           "typing 2.5s 1s steps(40, end) forwards,caret 0.75s step-end infinite",
+        loader: "loader 0.9s infinite alternate",
       },
     },
     keyframes: {
@@ -96,6 +97,12 @@ const config: Config = {
         },
         "100%": {
           borderColor: "transparent",
+        },
+      },
+      loader: {
+        "100%": {
+          opacity: "1",
+          transform: "scale(1)",
         },
       },
     },
